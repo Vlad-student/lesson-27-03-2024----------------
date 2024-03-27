@@ -1,0 +1,51 @@
+.title{
+    text-align: center;
+}
+.title::after{
+content:'\2735' ;
+color:rgb(137, 41, 189);
+}
+.title::before{
+    content:'\273A'  ;
+    color: rgb(154, 154, 78);
+}
+.link::before{
+    display: inline-block;
+    content: url(./assets/icons/account-box.svg);
+    width:25px ;
+    height: 25px;
+}
+.link:hover::before{
+    content: url(./assets/icons/account.svg);
+}
+
+.paper{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: rgb(247, 4, 44);
+    position: relative;
+    z-index: 1;
+    box-shadow: 3px 3px 5px 0px rgba(168,59,168,1);
+}
+.paper::after,
+.paper::before{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    box-shadow: 3px 3px 5px 0px rgba(168,59,168,1);
+}
+
+.paper::before{
+    background-color: rgb(60, 137, 110);
+    z-index: -10;
+    transform: rotate(3deg) translateX(7px);
+}
+.paper::after{
+    background-color: rgb(85, 11, 121);
+    z-index: -2;
+    transform: rotate(-2deg) translateY(8px);
+}
